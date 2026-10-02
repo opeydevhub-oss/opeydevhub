@@ -1,0 +1,28 @@
+{
+  "name": "opey-dev-hub",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verify": "npm run build && node tools/audit.mjs && node tools/palette.mjs && node tools/interact.mjs && node tools/deadcss.mjs && node tools/unused.mjs",
+    "verify:layout": "node tools/audit.mjs",
+    "verify:palette": "node tools/palette.mjs",
+    "verify:interact": "node tools/interact.mjs",
+    "verify:css": "node tools/deadcss.mjs",
+    "verify:unused": "node tools/unused.mjs",
+    "shots": "node tools/shots.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^6.4.3",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
