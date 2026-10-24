@@ -87,7 +87,7 @@ p { text-wrap: pretty; }
 .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; border: 1px solid var(--silver-300); border-radius: 12px; background: var(--white); }
 .menu-toggle span { width: 18px; height: 2px; background: var(--blue-950); border-radius: 4px; transition: transform .2s ease; }
 
-.hero { position: relative; overflow: clip; padding-block: clamp(56px, 8vw, 94px) clamp(62px, 8vw, 104px); }
+.hero { position: relative; overflow: clip; isolation: isolate; padding-block: clamp(56px, 8vw, 94px) clamp(62px, 8vw, 104px); }
 .hero::before { position: absolute; z-index: -1; top: -130px; right: -150px; width: min(58vw, 720px); aspect-ratio: 1; content: ""; border-radius: 50%; background: radial-gradient(circle at 45% 48%, rgba(188, 211, 255, .48), rgba(228, 237, 255, .32) 43%, rgba(250, 251, 253, 0) 72%); pointer-events: none; }
 .hero::after { position: absolute; z-index: -1; right: 0; bottom: 0; left: 0; height: 140px; content: ""; background: linear-gradient(0deg, rgba(242,245,249,.6), transparent); pointer-events: none; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(330px, .94fr); align-items: center; gap: clamp(36px, 6.4vw, 88px); }
