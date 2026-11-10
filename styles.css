@@ -406,7 +406,13 @@ p { text-wrap: pretty; }
 .project-visual--tribute{background:linear-gradient(135deg,#f0e9df,#e7e0d4)}
 .tribute-preview{color:#594c3d}
 .tribute-preview i{color:#8d795e}
-@media(prefers-reduced-motion:reduce){.intro-scene{display:none}.intro-player,.intro-kick-leg,.intro-ball{animation:none!important}}
+@media(prefers-reduced-motion:reduce){
+  .intro-player,.intro-kick-leg,.intro-ball{animation:none!important}
+  .intro-ball{transform:translate(80px,-35px) scale(1.15)}
+  .intro-scene{transition:none}
+}
+.intro-scene__art{transform-box:view-box}
+
 
 .project-visual--earnwise{background:linear-gradient(135deg,#e7f1ec,#f5f1df)}
 .earnwise-preview,.cbt-preview{display:flex;min-height:210px;flex-direction:column;justify-content:center;gap:12px;padding:clamp(22px,4vw,38px);color:#245b4b}
