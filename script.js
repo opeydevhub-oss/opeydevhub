@@ -7,20 +7,19 @@
   var introSkip = document.getElementById("intro-skip");
   if (intro) {
     var motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var alreadySeen = false;
-    try { alreadySeen = window.sessionStorage.getItem("odh-intro-seen") === "1"; } catch (error) {}
     function closeIntro() {
       if (!intro || intro.classList.contains("is-leaving")) return;
       intro.classList.add("is-leaving");
-      document.body.classList.remove("intro-active");
-      window.setTimeout(function () { if (intro && intro.parentNode) intro.parentNode.removeChild(intro); }, 600);
+      window.setTimeout(function () {
+        if (intro && intro.parentNode) intro.parentNode.removeChild(intro);
+      }, 600);
     }
-    if (motionPreference || alreadySeen) {
-      intro.remove();
+    if (motionPreference) {
+      intro.classList.add("intro-scene--reduced");
+      window.setTimeout(closeIntro, 1800);
     } else {
-      try { window.sessionStorage.setItem("odh-intro-seen", "1"); } catch (error) {}
       if (introSkip) introSkip.addEventListener("click", closeIntro);
-      window.setTimeout(closeIntro, 2650);
+      window.setTimeout(closeIntro, 3000);
     }
   }
 
