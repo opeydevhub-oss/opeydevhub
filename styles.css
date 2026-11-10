@@ -407,3 +407,12 @@ p { text-wrap: pretty; }
 .tribute-preview{color:#594c3d}
 .tribute-preview i{color:#8d795e}
 @media(prefers-reduced-motion:reduce){.intro-scene{display:none}.intro-player,.intro-kick-leg,.intro-ball{animation:none!important}}
+
+.project-visual--earnwise{background:linear-gradient(135deg,#e7f1ec,#f5f1df)}
+.earnwise-preview,.cbt-preview{display:flex;min-height:210px;flex-direction:column;justify-content:center;gap:12px;padding:clamp(22px,4vw,38px);color:#245b4b}
+.earnwise-preview span,.cbt-preview span,.earnwise-preview i,.cbt-preview i{font-size:.62rem;font-style:normal;font-weight:800;letter-spacing:.18em}
+.earnwise-preview strong,.cbt-preview strong{font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.05;letter-spacing:-.06em}
+.earnwise-preview i,.cbt-preview i{color:#718477}
+.project-visual--cbt{background:linear-gradient(135deg,#e7edf8,#f3f5fa)}
+.cbt-preview{color:#173b78}
+.project-link--private{display:inline-flex;align-items:center;min-height:34px;color:#687990;font-size:.82rem;font-weight:750}
