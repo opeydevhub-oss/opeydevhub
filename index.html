@@ -17,6 +17,33 @@
   <title>OPEY DEV HUB | Thoughtful websites, useful digital products</title>
 </head>
 <body>
+  <div class="intro-scene" id="intro-scene" aria-label="OPEY DEV HUB intro animation">
+    <div class="intro-scene__brand">OPEY <span>DEV HUB</span></div>
+    <p class="intro-scene__line">Ideas in motion. Digital experiences in play.</p>
+    <svg class="intro-scene__art" viewBox="0 0 760 420" role="img" aria-label="An animated footballer kicks a football toward the viewer">
+      <defs>
+        <radialGradient id="ballShade" cx="32%" cy="25%"><stop offset="0" stop-color="#fff"/><stop offset=".58" stop-color="#e9edf4"/><stop offset="1" stop-color="#9aa8bc"/></radialGradient>
+        <linearGradient id="playerShade" x2="1" y2="1"><stop stop-color="#315fbd"/><stop offset="1" stop-color="#10264a"/></linearGradient>
+      </defs>
+      <ellipse class="intro-ground" cx="360" cy="355" rx="245" ry="24"/>
+      <g class="intro-player" fill="url(#playerShade)" stroke="#10264a" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="300" cy="94" r="29" stroke="none"/>
+        <path d="M283 129 Q315 119 337 147 L350 226 Q329 246 284 229 L264 164Z" stroke="none"/>
+        <path d="M276 145 L224 205 L176 216" fill="none" stroke-width="23"/>
+        <path d="M333 148 L383 187 L418 165" fill="none" stroke-width="22"/>
+        <path d="M288 224 L270 295 L219 327" fill="none" stroke-width="27"/>
+        <path class="intro-kick-leg" d="M329 222 L370 270 L430 291" fill="none" stroke-width="29"/>
+        <path d="M204 327 L172 337 M430 291 L463 302" fill="none" stroke-width="16"/>
+      </g>
+      <g class="intro-ball">
+        <circle cx="492" cy="305" r="38" fill="url(#ballShade)" stroke="#8796ab" stroke-width="2"/>
+        <path d="M492 283l12 9-5 14h-15l-5-14z M463 296l16-4 M519 294l13 10 M482 335l-4-15 M511 330l-12-10" fill="#243b61" stroke="#243b61" stroke-width="5" stroke-linejoin="round"/>
+      </g>
+    </svg>
+    <span class="intro-scene__hint">A little kick-start before we begin</span>
+    <button class="intro-scene__skip" type="button" id="intro-skip">Skip intro</button>
+  </div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -207,6 +234,28 @@
             <p>A school website for programmes, admissions and policies, with dedicated student, parent, staff and admin portal areas.</p>
             <div class="project-tags"><span>School portal</span><span>Supabase</span><span>Web app</span></div>
             <a class="project-link" href="https://opeydevhub-oss.github.io/darel-hikmal/" target="_blank" rel="noopener noreferrer">Explore the academy site <span aria-hidden="true">↗</span></a>
+          </article>
+          
+          <article class="project-card" data-category="business" data-reveal>
+            <div class="project-visual project-visual--risku" aria-hidden="true">
+              <div class="risku-preview"><span>IDEAL RISKU</span><strong>Global trade.<br>Clearer connections.</strong><i>COMPANY WEBSITE CONCEPT</i></div>
+            </div>
+            <div class="project-meta"><span class="project-type">Website redesign concept</span><span class="project-note">Independent concept</span></div>
+            <h3>Ideal Risku Global Limited</h3>
+            <p>A multi-page redesign concept covering company information, proposed services, product presentation and customer enquiries. Prepared for review, not represented as the company's official website.</p>
+            <div class="project-tags"><span>Responsive design</span><span>Multi-page</span><span>UI concept</span></div>
+            <a class="project-link" href="https://github.com/opeydevhub-oss/ideal-risku-redesign" target="_blank" rel="noopener noreferrer">View project source <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card" data-category="business" data-reveal>
+            <div class="project-visual project-visual--tribute" aria-hidden="true">
+              <div class="tribute-preview"><span>WITH APPRECIATION</span><strong>A life of<br>service & impact.</strong><i>A BIRTHDAY TRIBUTE</i></div>
+            </div>
+            <div class="project-meta"><span class="project-type">Personal tribute website</span></div>
+            <h3>Hon. Daud Olasupo Olukosi I</h3>
+            <p>A responsive birthday tribute experience with a restrained cream, ash and muted-gold visual direction.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <a class="project-link" href="https://github.com/opeydevhub-oss/hon-daud-birthday." target="_blank" rel="noopener noreferrer">View project source <span aria-hidden="true">↗</span></a>
           </article>
         </div>
         <p class="work-note">The interface illustrations above are stylised previews, not screenshots of the live products.</p>
