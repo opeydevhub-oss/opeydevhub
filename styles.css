@@ -397,7 +397,7 @@ p { text-wrap: pretty; }
 .intro-scene__skip:hover{background:#fff;border-color:#3672f5}
 @keyframes intro-player-kick{0%,35%{transform:translateX(-35px)}52%{transform:translateX(0) rotate(-5deg)}70%,100%{transform:translateX(0)}}
 @keyframes intro-leg-kick{0%,38%{transform:rotate(0)}55%{transform:rotate(-42deg)}72%,100%{transform:rotate(0)}}
-@keyframes intro-ball-fly{0%,47%{transform:translate(0,0) scale(.5);opacity:0}57%{opacity:1}78%{transform:translate(25px,-22px) scale(1.2)}100%{transform:translate(40px,-40px) scale(15);opacity:0}}
+@keyframes intro-ball-fly{0%,47%{transform:translate(0,0) scale(.5);opacity:0}57%{opacity:1}78%{transform:translate(25px,-22px) scale(1.2)}100%{transform:translate(40px,-40px) scale(15);opacity:1}}
 .project-visual--risku{background:linear-gradient(135deg,#e9f0fa,#f8f5ec)}
 .risku-preview,.tribute-preview{display:flex;min-height:210px;flex-direction:column;justify-content:center;gap:12px;padding:clamp(22px,4vw,38px);color:#173b78}
 .risku-preview span,.tribute-preview span,.risku-preview i,.tribute-preview i{font-size:.62rem;font-style:normal;font-weight:800;letter-spacing:.18em}
