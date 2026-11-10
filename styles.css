@@ -380,3 +380,30 @@ p { text-wrap: pretty; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   html.has-js [data-reveal]:not(.is-visible) { opacity: 1; transform: none; }
 }
+
+/* Animated football intro */
+.intro-scene{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;align-content:center;overflow:hidden;padding:24px;background:radial-gradient(circle at 50% 48%,#fff 0,#f2f6fd 52%,#e5edf9 100%);color:#10264a;transition:opacity .55s ease,visibility .55s ease}
+.intro-scene.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
+.intro-scene__brand{font-size:clamp(1.2rem,3vw,1.8rem);font-weight:900;letter-spacing:.16em}
+.intro-scene__brand span{color:#3672f5}
+.intro-scene__line{margin:10px 0 0;color:#65758d;font-size:.92rem;text-align:center}
+.intro-scene__art{width:min(760px,100%);height:auto;overflow:visible}
+.intro-ground{fill:#dce6f5}
+.intro-player{transform-origin:300px 220px;animation:intro-player-kick 2.25s cubic-bezier(.2,.7,.2,1) both}
+.intro-kick-leg{transform-origin:329px 222px;animation:intro-leg-kick 2.25s cubic-bezier(.2,.7,.2,1) both}
+.intro-ball{transform-origin:492px 305px;animation:intro-ball-fly 2.25s cubic-bezier(.18,.72,.2,1) both}
+.intro-scene__hint{margin-top:-18px;color:#7a8aa2;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.intro-scene__skip{position:absolute;right:clamp(18px,4vw,48px);bottom:clamp(18px,4vw,38px);padding:10px 16px;border:1px solid #cbd8ec;border-radius:999px;color:#173b78;background:rgba(255,255,255,.8);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.intro-scene__skip:hover{background:#fff;border-color:#3672f5}
+@keyframes intro-player-kick{0%,35%{transform:translateX(-35px)}52%{transform:translateX(0) rotate(-5deg)}70%,100%{transform:translateX(0)}}
+@keyframes intro-leg-kick{0%,38%{transform:rotate(0)}55%{transform:rotate(-42deg)}72%,100%{transform:rotate(0)}}
+@keyframes intro-ball-fly{0%,47%{transform:translate(0,0) scale(.5);opacity:0}57%{opacity:1}78%{transform:translate(25px,-22px) scale(1.2)}100%{transform:translate(40px,-40px) scale(15);opacity:0}}
+.project-visual--risku{background:linear-gradient(135deg,#e9f0fa,#f8f5ec)}
+.risku-preview,.tribute-preview{display:flex;min-height:210px;flex-direction:column;justify-content:center;gap:12px;padding:clamp(22px,4vw,38px);color:#173b78}
+.risku-preview span,.tribute-preview span,.risku-preview i,.tribute-preview i{font-size:.62rem;font-style:normal;font-weight:800;letter-spacing:.18em}
+.risku-preview strong,.tribute-preview strong{font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.05;letter-spacing:-.06em}
+.risku-preview i{color:#65758d}
+.project-visual--tribute{background:linear-gradient(135deg,#f0e9df,#e7e0d4)}
+.tribute-preview{color:#594c3d}
+.tribute-preview i{color:#8d795e}
+@media(prefers-reduced-motion:reduce){.intro-scene{display:none}.intro-player,.intro-kick-leg,.intro-ball{animation:none!important}}
